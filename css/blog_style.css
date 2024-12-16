@@ -1,0 +1,93 @@
+
+.header .listbox li a{
+    font-size: 20px;
+    color: firebrick;
+    text-decoration: none;
+    padding: 15px 20px;
+    }
+    .listbox li a:hover {
+        background: rgb(93, 93, 180);
+        color: gray;
+        border-radius: 50%;
+    }
+    .listbox li {
+        float: left;
+        list-style: none;
+    }
+    .listbox {
+        float: inline-end;
+        /* position: absolute;
+        right: 10px;
+        top: 5px; */
+    }
+    .main {
+        grid-area: main;
+        background: linear-gradient(45deg, rgb(118, 74, 84),  rgb(91, 92, 62),  rgb(109, 81, 65),  rgb(92, 85, 51),  rgb(85, 64, 64));
+        color: antiquewhite;
+        text-align: center;
+    }
+    .contain {
+        background: white;
+        height: 350px;
+        color: gray;
+        width: 300px;
+        padding-top: 10px;
+        margin: auto;
+        border-radius: 5px;
+    }
+    .footer {
+        grid-area:footer;
+        padding-left: 7px;
+        text-align: left;  
+    background: rgb(61, 56, 56);
+    color: wheat;
+    }
+    footer ul li {
+        list-style: none;
+        text-decoration: none;
+    
+    }
+    img {
+        border: none;
+    }
+    #quick {
+       text-align: left;
+    }
+    .line {
+        background-color: yellow;
+        width: 60px;
+        height: 3px;
+        border-radius: 5px;
+       text-align: left;
+    } 
+    .listbox-2 li a {
+        text-decoration: none;
+        color: wheat;
+        line-height: 2rem;
+    }
+    .content {
+        line-height: 2rem;
+       text-align: left;
+    }
+    footer ul li {
+        list-style: none;
+        text-decoration: none;
+    
+    }
+    .listbox-2 li a:hover {
+        color: yellowgreen;
+    }
+
+    .Order {
+        background: linear-gradient(45deg, rgb(118, 64, 84),  rgb(91, 82, 62),  rgb(143, 81, 75),  rgb(92, 85, 51),  rgb(85, 64, 64));
+        display: inline-block;
+        font-size: 18px;
+        color: #fff;
+        position: relative;
+        padding: 13px 20px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        width: 100px;
+        transition: all 0.3s ease-in;
+    }
