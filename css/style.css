@@ -24,7 +24,7 @@
 
 /* <ain styling */
 html,body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.7em;
 }
 
@@ -58,6 +58,7 @@ p {
     background: azure;
     opacity: 0.7;
     border-radius: 50px;
+    font-style: italic;
 }
 
 .lead {
@@ -96,25 +97,26 @@ p {
 .btn {
     width: 160px;
     height: 60px;
-    animation-name: animate1;
+    /* animation-name: animate1;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse; */
+    background-color: var(--overlay-color);
 }
-
+/* 
 @keyframes animate1 {
     /* from {
         width: 200px;
     } */
-    to {
+    /* to {
         width: 300px;
-        background-color: rgb(109, 66, 37);
+        background-color: goldenrod;
     }
-}
+} */ *
 
 .btn:hover {
-    background: aquamarine;
-    color: #ddd;
+    background: goldenrod;
+    color: #444;
 }
 
 .s-light {
@@ -155,8 +157,11 @@ p {
 
 /* Navbar */
 #navbar {
-    background: rgb(109, 66, 37);
     overflow: auto;
+    /* background:  rgba(46, 97, 148, 0.85); */
+    background:   goldenrod;
+    opacity: 5;
+    color: #ddd;
 }
 
 #navbar a {
@@ -185,14 +190,14 @@ p {
 
 #navbar ul li a:hover,
  #navbar ul li a.current {
-
-    color: #f7c08a;
+    color: var(--overlay-color);
     border-radius: 20px;
 }
 
 /* Showcase */
 #showcase {
     background: url('../img/inter.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     height: 600px;
 }
 
@@ -231,8 +236,6 @@ p {
 #showcase .showcase-content h1 {
     font-size: 50px;
     line-height: 1.2em;
-
-    
 }
 
 #showcase .showcase-content p {
@@ -243,13 +246,25 @@ p {
 /* Home info */
 #home-info {
     height: 450px;
+
 }
 
 #home-info .info-img {
     float: left;
     width: 50%;
-    background: url('../img/tre.jpg') no-repeat center center/cover;
+    background: url('../img/decoration.jpg') no-repeat center center/cover;
     min-height: 100%;
+    animation: colorChange 15s ease-in-out infinite;
+}
+
+
+@keyframes colorChange {
+    0% {background-image:url(../img/c6.jpg) ; }
+    25% {background-image:url(../img/catering3.jpg); }
+    50% { background-image:url(../img/ci.jpeg); }
+    60% { background-image:url(../img/catering4.jpg) }
+    85% { background-image:url(../img/c2.webp); }
+    100% { background-image:url(../img/food2.jpg);  }
 }
 
 #home-info .info-content {
@@ -259,7 +274,15 @@ p {
     height: 100%;
     padding: 50px 30px;
     overflow: hidden;
+    background-color: var(--overlay-color);
+    /* animation: pulse 15s ease-in-out ; */
 }
+
+/* @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+} */
 
 #home-info .info-content p {
     padding-bottom: 30px;
@@ -273,12 +296,19 @@ p {
     text-align: center;
     min-height: 275px;
     border: 1px solid grey;
-    border-radius: 20%;
     transition: all 0.3s ease-in;
+    animation: fadeIn 5s ease-in ;
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 
 .box:hover {
     background-color: aquamarine;
+
 }
 
 .come, .me {
@@ -299,7 +329,7 @@ p {
 #about-info .info-right img {
     display: block;
     width: 70%;
-    margin: auto;
+    margin: auto;  
     border-radius: 50%;
 }
 
@@ -312,7 +342,7 @@ p {
 /* Testimponials */
 #testimonials {
     height: 100%;
-    background: url('../img/fun.jpg') no-repeat center center/cover;
+    background: url('../img/decoration1.jpg') no-repeat center center/cover;
     padding-top: 100px;
 }
 
@@ -328,7 +358,18 @@ p {
     border-radius: 20px;
     opacity: 0.9;
     background-color: rgb(109, 66, 37);
+    /* animation: moveAndFade 2s ease-in-out infinite; */
 }
+
+.mark {
+    font-family: cursive;
+}
+
+
+/* @keyframes moveAndFade {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100px); opacity: 0; }
+} */
 
 #testimonials .testimonial img {
     width: 100px;
@@ -338,6 +379,10 @@ p {
 }
 
 /* Contact */
+#contact-form {
+    background-color: cornsilk;
+}
+
 #contact-form .form-group {
     margin-bottom: 20px;
 }
@@ -361,7 +406,7 @@ p {
 #contact-form input:focus, 
 #contact-form textarea:focus {
     outline: none;
-    border-color: rgb(7, 13, 13);
+    border-color: rgb(14, 22, 22);
 }
 
 #contact-info .bg-dark {
@@ -369,18 +414,55 @@ p {
 }
 
 /* Gallery */
-.pictures {
-    min-height: 10%;
+#pictures {
+    min-height: 100%;
     padding-top: 20px;
     background-color: aquamarine;
-    height: 200vh;
+    height: 100%;
+    padding: 60px;
+    text-align: center;
+
+}
+
+#pictures
+
+.image-animation {
+    animation: slideIn 2s ease-in;
+}
+
+.manyo {
+    animation: fadeIn 2s ease-in ;
+}
+
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+
+.decoration {
+    min-height: 100%;
+    padding-top: 20px;
+    background-color: aquamarine;
+    height: 100%;
     padding: 50px;
 }
+
+.image5, .image4, .image3, 
+.image2, .image1  {
+    border-radius: 50px;
+    border: 3px solid rgb(166, 255, 0);
+    width: 200px;
+    height: 400px;
+}
+
 
 
 /* Services */
 #services {
     text-align: center;
+    margin: 5cqb;
 }
 
 #submit {
@@ -394,9 +476,59 @@ p {
 }
 
 /* Footer */
-#main-footer {
+/* #main-footer {
     text-align: center;
-    background:  rgb(133, 109, 89);
+    background-color: goldenrod;
     color: #fff;
     padding: 20px;
+    padding-top: 30px;
+    font-size: 20px;
+} */
+
+footer {
+    background-color: #444;
+    color: aliceblue;
 }
+
+footer a {
+    color: #fff;
+    padding-left: 25px;
+    animation: pulse infinite 3s ease-in-out;
+}
+
+.hr {
+    background-color: yellowgreen;
+    height: 3px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.coral {
+    color: coral;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.line {
+    background-color: yellow;
+    width: 60px;
+    height: 3px;
+    border-radius: 5px;
+    margin-left: 20px;
+} 
+
+.listbox-2 li a:hover {
+    color: yellowgreen;
+}
+
+
+
+
+
+#quick {
+    padding-left: 25px;
+}
+
+
+
