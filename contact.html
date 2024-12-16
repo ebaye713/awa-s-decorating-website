@@ -28,7 +28,8 @@
                     <li><a href="About.html">About</a>
                     <li><a  href="galery.html">Galary</a></li>
                     <li><a  href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="current" href="contact.html">Contact</a></li>
+                    <li><a href="order.html">Order</a></li>
                 </ul> 
                 </div>  
             </div>
@@ -53,47 +54,71 @@
         </nav>
     </header> -->
 
-    <section id="contact-form" class="py-3">
+    <section id="contact-form" class="py-3" onsubmit="submit">
         <div class="container">
             <h1 class="l-heading"><span class="text-primary"> Contact</span> Us</h1>
             <p>Please Fill Out The Form Bellow To Contact Us</p>
-            <form action="process.php">
+            <form action="https://formspree.io/f/xgvebplk" method="post">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Praise">
+                    <input type="text" name="name" id="name" required placeholder="Praise">
                 </div>
                 <div class="form-group">
                     <label for="Email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Praise@gmail.com">
+                    <input type="email" name="email" id="email" required placeholder="Praise@gmail.com">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" required id="message"></textarea>
                 </div>
-                <a class="prs" href="./submit.html">Submit</a>
-                
+              <button >>submit</button>
+            </form>   
         </div>
     </section>
 
-    <!-- <section id="contact-info" class="bg-light">
-        <div class="container">
-            <div class="box come">
-                <h3>Location</h3>
-                <p>Our site is located in Nigeria Cross River State Ikom Local Government Area.</p>
-            </div>
-            <div class="box you">
-                <h3>Phone</h3>
-                <p>+12381694669123</p>
-            </div>
-            <div class="box me">
-                <h3>Services</h3>
-                <p>We dont just offer decoration service, we also offer cattering services like, Baking and Commercial Cooking.</p>
-            </div>
+    <section id="contact-info" class="bg-light">
+      
+    <section id="features">
+        <div class="box come">
+            <h3>Great Location</h3>
+            <p>Our site is located in Nigeria Cross River State Ikom Local Government Area.</p>
         </div>
-    </section> -->
+        <div class="box you">
+            <h3>Phone</h3>
+            <p>+23481694669123</p>
+        </div>
+        <div class="box me">
+            <h3>Services</h3>
+            <p>We dont just offer decoration service, we also offer cattering services like, Baking and Commercial Cooking.</p>
+        </div>
+    </section>
 
-    <footer id="main-footer">
+    <!-- <footer id="main-footer">
         <p>Awa's Concept &copy; 2022, Alright Reserve</p>
+    </footer> -->
+
+    <footer class="footer">
+        <h1>AC</h1>
+          <br>
+          <br>
+          <h2 id="quick">Quick Links</h2>
+          <div class="line"></div>
+        <ul class="listbox-2">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact form</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">service</a></li>
+            <li><a href="galery.html">galary</a></li>
+            <li><a href="./order.html">Order</a></li>
+         </ul>
+        <br>
+        <h2 id="quick">Contact Information</h2>
+        <div class="line"></div>
+        <p class="cone">No. 5 calabar road ikom,Cross river Nigeria. <br>
+            +234(0) 816 946 9123 <br>
+            Wellcome@awa'sconceptgloal.com 
+        </p>
+  
     </footer>
 </body>
 </html>
